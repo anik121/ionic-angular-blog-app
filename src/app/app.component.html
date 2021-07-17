@@ -3,11 +3,23 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>anikishaan@yahoo.com</ion-note>
+          <div class="ion-justify-content-start">
+            <ion-col size="4">
+
+
+              <ion-avatar>
+                <img src="https://image.flaticon.com/icons/png/512/4825/4825044.png" />
+              </ion-avatar>
+            </ion-col>
+            <ion-col size="8">
+              <ion-list-header>Anik Ishaan</ion-list-header>
+              <ion-note>anikishaan@yahoo.com</ion-note>
+            </ion-col>
+          </div>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
