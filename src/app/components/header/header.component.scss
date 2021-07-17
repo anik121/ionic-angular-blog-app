@@ -1,0 +1,19 @@
+.main-header::after {
+  background-image: none;
+}
+.notification-wrapper {
+  .badge {
+    position: absolute;
+    top: 11px;
+    right: 13px;
+    color: crimson;
+    z-index: 1;
+    font-size: 11px;
+    z-index: 1;
+  }
+  .notify-icon {
+    position: relative;
+    font-size: 26px;
+    margin-right: 10px;
+  }
+}

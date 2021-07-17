@@ -1,3 +1,19 @@
-<p>
-  header works!
-</p>
+<ion-header class="main-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <div class="d-flex ion-justify-content-between">
+      <ion-title>{{ title }}</ion-title>
+      <div class="notification-wrapper">
+        <ion-icon class="badge" name="ellipse"></ion-icon>
+        <ion-icon
+          class="notify-icon"
+          (click)="onClick()"
+          slot="start"
+          name="Notifications-outline"
+        ></ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
