@@ -1,3 +1,22 @@
-<p>
-  footer works!
-</p>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom,top">
+        <!-- Start Single Tab Router -->
+        <ion-tab-button
+          *ngFor="let menu of navMenu"
+          [routerLink]="menu.path"
+          routerLinkActive="selected"
+          #rActive="routerLinkActive"
+        >
+          <ion-icon
+            [name]="
+              rActive.isActive ? menu.icon + '-sharp' : menu.icon + '-outline'
+            "
+          ></ion-icon>
+        </ion-tab-button>
+        <!-- End Single Tab Router -->
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

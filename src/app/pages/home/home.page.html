@@ -1,24 +1,7 @@
 <app-header title="সাম্প্রতিক পোস্ট"></app-header>
 
 <ion-content>
-  <ion-slides pager="true" [options]="slideOpts" class="ion-padding">
-    <ion-slide *ngFor="let s of sliders">
-      <div>
-        <ion-img class="slider-img" [src]="s.imgPath"></ion-img>
-
-        <div class="d-flex ion-justify-content-between ion-padding">
-          <ion-label class="slider-post-title ion-text-left"
-            >{{s.title}}</ion-label
-          >
-          <ion-icon
-            class="bookmark-post-icon"
-            slot="end"
-            [name]="isBookmark ? 'bookmark' : 'bookmark-outline'"
-            (click)="onBookmarkSliderPost(s.id)"
-          ></ion-icon>
-        </div>
-      </div>
-    </ion-slide>
-    <!-- End Single Slider -->
-  </ion-slides>
+  <app-home-slider></app-home-slider>
 </ion-content>
+
+<app-footer></app-footer>

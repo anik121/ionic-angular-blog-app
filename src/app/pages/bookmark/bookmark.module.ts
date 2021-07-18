@@ -7,14 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { BookmarkPageRoutingModule } from './bookmark-routing.module';
 
 import { BookmarkPage } from './bookmark.page';
-
+import { HeaderComponent } from 'src/app/components/header/header.component';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    BookmarkPageRoutingModule
-  ],
-  declarations: [BookmarkPage]
+  imports: [CommonModule, FormsModule, IonicModule, BookmarkPageRoutingModule],
+  declarations: [BookmarkPage, HeaderComponent, FooterComponent],
 })
 export class BookmarkPageModule {}

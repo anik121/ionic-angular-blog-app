@@ -1,0 +1,15 @@
+<ion-slides pager="true" [options]="slideOpts" class="ion-padding">
+  <ion-slide *ngFor="let s of sliders">
+    <div>
+      <ion-img class="slider-img" [src]="s.imgPath"></ion-img>
+
+      <div class="d-flex ion-justify-content-between ion-padding">
+        <ion-label class="slider-post-title ion-text-left">{{
+          s.title
+        }}</ion-label>
+        <app-bookmark-icon [Id]="s.id"></app-bookmark-icon>
+      </div>
+    </div>
+  </ion-slide>
+  <!-- End Single Slider -->
+</ion-slides>
