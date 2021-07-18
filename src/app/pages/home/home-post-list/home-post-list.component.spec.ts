@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { BookmarkPage } from './bookmark.page';
+import { HomePostListComponent } from './home-post-list.component';
 
-describe('BookmarkPage', () => {
-  let component: BookmarkPage;
-  let fixture: ComponentFixture<BookmarkPage>;
+describe('HomePostListComponent', () => {
+  let component: HomePostListComponent;
+  let fixture: ComponentFixture<HomePostListComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookmarkPage ],
+      declarations: [ HomePostListComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(BookmarkPage);
+    fixture = TestBed.createComponent(HomePostListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -13,6 +13,7 @@ interface Post {
   styleUrls: ['./notification-list.component.scss'],
 })
 export class NotificationListComponent implements OnInit {
+  isLoading: boolean = false;
   posts: Post[] = [];
   constructor(
     private modalController: ModalController,
@@ -23,8 +24,14 @@ export class NotificationListComponent implements OnInit {
     this._otherService.getPost().subscribe((post) => {
       this.posts = post;
     });
-    console.log(this.posts);
+
+    setTimeout(() => {
+      if (this.posts.length > 0) {
+        this.isLoading = true;
+      }
+    }, 2000);
   }
+
   /**
    * @return (Close Modal)
    */

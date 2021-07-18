@@ -6,9 +6,15 @@
     ></ion-button>
   </ion-list-header>
   <!-- End Modal Header Part -->
-  <ion-list>
-    <ion-item *ngFor="let post of posts">
-      <ion-label>{{ post.title }}</ion-label>
-    </ion-item>
-  </ion-list>
+  <div class="spinner" *ngIf="!isLoading; else postList">
+    <ion-spinner name="lines"></ion-spinner>
+  </div>
+
+  <ng-template #postList>
+    <ion-list>
+      <ion-item *ngFor="let post of posts">
+        <ion-label>{{ post.title }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-template>
 </ion-content>

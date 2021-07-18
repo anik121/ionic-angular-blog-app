@@ -61,7 +61,7 @@ export class BookmarkIconComponent implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  onBookmarkSliderPost(id: number) {
+  onBookmarkSliderPost() {
     this.isBookmark = !this.isBookmark;
     if (this.isBookmark) {
       this.bookmarkToast();
