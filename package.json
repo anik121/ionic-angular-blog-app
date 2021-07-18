@@ -6,11 +6,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "ionic serve"
+    "dev": "ionic serve",
+    "build": "command-to-build (ex: webpack, tsc, babel, etc.)"
   },
   "private": true,
   "dependencies": {

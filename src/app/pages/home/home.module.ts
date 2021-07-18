@@ -5,12 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+// Custom Component
 import { HomePage } from './home.page';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { SliderComponent } from './slider/slider.component';
 import { BookmarkIconComponent } from 'src/app/components/bookmark-icon/bookmark-icon.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
+import { NotificationListComponent } from 'src/app/components/notification-list/notification-list.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
@@ -20,6 +21,7 @@ import { FooterComponent } from 'src/app/components/footer/footer.component';
     SliderComponent,
     BookmarkIconComponent,
     FooterComponent,
+    NotificationListComponent,
   ],
 })
 export class HomePageModule {}

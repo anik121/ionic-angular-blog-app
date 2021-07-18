@@ -1,15 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-
+import { OthersService } from 'src/app/services/others.service';
+interface Post {
+  id: number;
+  title: string;
+  content: string;
+  create_at: number;
+}
 @Component({
   selector: 'app-notification-list',
   templateUrl: './notification-list.component.html',
   styleUrls: ['./notification-list.component.scss'],
 })
 export class NotificationListComponent implements OnInit {
-  constructor(private modalController: ModalController) {}
+  posts: Post[] = [];
+  constructor(
+    private modalController: ModalController,
+    private _otherService: OthersService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this._otherService.getPost().subscribe((post) => {
+      this.posts = post;
+    });
+    console.log(this.posts);
+  }
   /**
    * @return (Close Modal)
    */
