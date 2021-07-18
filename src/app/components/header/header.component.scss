@@ -1,5 +1,10 @@
+@import "/src/var";
+
 .main-header::after {
   background-image: none;
+}
+ion-title {
+  color: $primary-color;
 }
 .notification-wrapper {
   .badge {
@@ -14,6 +19,7 @@
   .notify-icon {
     position: relative;
     font-size: 26px;
+    color: $primary-color;
     margin-right: 10px;
   }
 }

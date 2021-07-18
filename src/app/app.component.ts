@@ -15,7 +15,7 @@ interface User {
 })
 export class AppComponent implements OnInit {
   public appPages = [
-    { title: 'Home', url: '/', icon: 'home', match: true },
+    { title: 'Home', url: '/home', icon: 'home', match: true },
     { title: 'Search', url: '/search', icon: 'search-circle' },
     { title: 'Bookmark', url: '/bookmark', icon: 'bookmarks' },
     { title: 'Profile', url: '/user', icon: 'person' },

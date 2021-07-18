@@ -1,3 +1,5 @@
+@import "/src/var";
+
 ion-img {
   border-radius: 10px;
   overflow: hidden;
@@ -5,7 +7,6 @@ ion-img {
 }
 .slider-post-title {
   flex: 1;
-}
-.bookmark-post-icon {
-  font-size: 25px;
+  color: $primary-color;
+  font-weight: 500;
 }

@@ -12,7 +12,6 @@ import { SliderComponent } from './slider/slider.component';
 import { BookmarkIconComponent } from 'src/app/components/bookmark-icon/bookmark-icon.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { NotificationListComponent } from 'src/app/components/notification-list/notification-list.component';
-import { HomeCategoryComponent } from './home-category/home-category.component';
 import { HomePostListComponent } from './home-post-list/home-post-list.component';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { HomePostListComponent } from './home-post-list/home-post-list.component
     BookmarkIconComponent,
     FooterComponent,
     NotificationListComponent,
-    HomeCategoryComponent,
     HomePostListComponent,
   ],
 })

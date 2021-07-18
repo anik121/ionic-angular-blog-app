@@ -1,20 +1,34 @@
 <ion-content>
   <ion-list-header>
-    <ion-label class="notify-title">নতুন পোস্ট সমূহ</ion-label>
+    <ion-label class="notify-title">পোস্ট সমূহ</ion-label>
     <ion-button class="closeModal" color="danger" (click)="onCloseModal()"
       >বন্ধ করুন <ion-icon name="close-outline"></ion-icon
     ></ion-button>
   </ion-list-header>
   <!-- End Modal Header Part -->
-  <div class="spinner" *ngIf="!isLoading; else postList">
-    <ion-spinner name="lines"></ion-spinner>
+  <div class="spinner ion-padding" *ngIf="!isLoading; else postList">
+    <!-- <ion-spinner name="lines"></ion-spinner> -->
+    <ion-img src="assets/img/svg/synchronize.svg"></ion-img>
   </div>
 
   <ng-template #postList>
-    <ion-list>
-      <ion-item *ngFor="let post of posts">
+    <ion-label class="info-txt">বামে বা ডানে সুইপ করুন</ion-label>
+    <ion-item-sliding *ngFor="let post of posts">
+      <ion-item-options side="start">
+        <ion-item-option color="danger" (click)="deletePost(post.id)"
+          >Delete</ion-item-option
+        >
+      </ion-item-options>
+      <!-- End Left Sliding Option -->
+      <ion-item>
         <ion-label>{{ post.title }}</ion-label>
       </ion-item>
-    </ion-list>
+      <!-- End Post Title -->
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="readPost(post.id)">Read</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <!-- End Right Sliding Option -->
   </ng-template>
 </ion-content>

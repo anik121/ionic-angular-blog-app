@@ -43,4 +43,17 @@ export class NotificationListComponent implements OnInit {
   onCloseModal() {
     this.dismiss();
   }
+
+  /**
+   * @return (Delete Post ID)
+   */
+  deletePost(id: number) {
+    console.log(id);
+  }
+  /**
+   * @return (Read Post ID)
+   */
+  readPost(id: number) {
+    console.log(id);
+  }
 }
