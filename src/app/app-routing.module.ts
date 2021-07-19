@@ -41,6 +41,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'post/:id',
+    loadChildren: () =>
+      import('./pages/single-post/single-post.module').then(
+        (m) => m.SinglePostPageModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./pages/not-found/not-found.module').then(

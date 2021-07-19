@@ -6,7 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  showNewPosts: boolean = true;
   constructor() {}
 
   ngOnInit() {}
+
+  segmentChanged(e) {
+    if (e.detail.value === 'qns') {
+      this.showNewPosts = false;
+    } else {
+      this.showNewPosts = true;
+    }
+  }
 }

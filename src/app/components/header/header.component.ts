@@ -8,7 +8,7 @@ import { NotificationListComponent } from '../notification-list/notification-lis
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() title: string = 'Undefined Title';
+  @Input() title: string = '';
   constructor(private modalController: ModalController) {}
 
   ngOnInit() {}

@@ -2,7 +2,11 @@
   <ion-label>নতুন পোস্ট</ion-label>
 </ion-list-header>
 
-<ion-list class="d-flex justify-content-between" *ngFor="let post of posts">
+<ion-list
+  class="d-flex justify-content-between"
+  *ngFor="let post of posts"
+  [routerLink]="'/post/' + post.id"
+>
   <div class="left-item">
     <ion-label class="post-title">{{ post.title }}</ion-label>
     <time>

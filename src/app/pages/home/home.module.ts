@@ -13,6 +13,7 @@ import { BookmarkIconComponent } from 'src/app/components/bookmark-icon/bookmark
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { NotificationListComponent } from 'src/app/components/notification-list/notification-list.component';
 import { HomePostListComponent } from './home-post-list/home-post-list.component';
+import { HomeQnsListComponent } from './home-qns-list/home-qns-list.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
@@ -24,6 +25,7 @@ import { HomePostListComponent } from './home-post-list/home-post-list.component
     FooterComponent,
     NotificationListComponent,
     HomePostListComponent,
+    HomeQnsListComponent,
   ],
 })
 export class HomePageModule {}

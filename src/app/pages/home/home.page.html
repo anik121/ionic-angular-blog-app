@@ -1,8 +1,17 @@
 <app-header title="সাম্প্রতিক পোস্ট"></app-header>
 
 <ion-content class="ion-padding">
-  <app-home-slider></app-home-slider>
+  <ion-segment (ionChange)="segmentChanged($event)" value="post" color="medium">
+    <ion-segment-button value="post">
+      <ion-label>নতুন পোস্ট</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="qns">
+      <ion-label>প্রশ্ন উত্তরঃ</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <!-- <app-home-slider></app-home-slider> -->
   <app-home-post-list></app-home-post-list>
+  <app-home-qns-list></app-home-qns-list>
 </ion-content>
 
 <app-footer></app-footer>

@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header class="p-0 mb-3">
+      <ion-card-title>{{posts[0].title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <article
+        class="single-post"
+        [innerHTML]="getPostContent(posts[0].content)"
+      ></article>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<app-footer></app-footer>
