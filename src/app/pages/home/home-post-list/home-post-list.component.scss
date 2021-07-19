@@ -1,34 +1,22 @@
 @import "/src/var";
-ion-list-header {
-  padding: 0;
-  ion-label {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: $primary-color;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba($primary-color, 0.3);
-  }
+
+.post-title {
+  display: block;
+  font-weight: 500;
+  color: rgba($primary-color, 0.8);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 5px;
 }
-.left-item {
-  flex: 1;
-  .post-title {
-    display: block;
-    font-weight: 500;
-    color: rgba($primary-color, 0.8);
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    margin-bottom: 5px;
+time {
+  display: flex;
+  align-items: center;
+  color: rgba($primary-color, 0.6);
+  ion-icon {
+    font-size: 18px;
+    margin-right: 10px;
   }
-  time {
-    display: flex;
-    align-items: center;
-    color: rgba($primary-color, 0.6);
-    ion-icon {
-      font-size: 18px;
-      margin-right: 10px;
-    }
-    font-size: 16px;
-  }
+  font-size: 16px;
 }

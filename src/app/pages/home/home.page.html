@@ -10,8 +10,11 @@
     </ion-segment-button>
   </ion-segment>
   <!-- <app-home-slider></app-home-slider> -->
-  <app-home-post-list></app-home-post-list>
-  <app-home-qns-list></app-home-qns-list>
+
+  <app-home-post-list *ngIf="showNewPosts; else qns"></app-home-post-list>
+  <ng-template #qns>
+    <app-home-qns-list></app-home-qns-list>
+  </ng-template>
 </ion-content>
 
 <app-footer></app-footer>

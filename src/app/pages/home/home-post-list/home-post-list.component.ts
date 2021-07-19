@@ -13,7 +13,6 @@ interface Post {
   styleUrls: ['./home-post-list.component.scss'],
 })
 export class HomePostListComponent implements OnInit {
-  isLoading = false;
   posts: Post[] = [];
   constructor(private _otherService: OthersService) {}
 

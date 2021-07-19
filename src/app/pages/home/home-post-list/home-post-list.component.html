@@ -1,18 +1,22 @@
-<ion-list-header>
-  <ion-label>নতুন পোস্ট</ion-label>
-</ion-list-header>
-
 <ion-list
   class="d-flex justify-content-between"
   *ngFor="let post of posts"
   [routerLink]="'/post/' + post.id"
 >
-  <div class="left-item">
-    <ion-label class="post-title">{{ post.title }}</ion-label>
-    <time>
-      <ion-icon name="timer-outline"></ion-icon>
-      {{ getPostTime(post.create_at) }}</time
-    >
-  </div>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img
+        src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=s"
+      />
+    </ion-avatar>
+    <div>
+      <ion-label class="post-title">{{ post.title }}</ion-label>
+      <time>
+        <ion-icon name="timer-outline"></ion-icon>
+        {{ getPostTime(post.create_at) }}
+      </time>
+    </div>
+  </ion-item>
+
   <app-bookmark-icon [Id]="post.id"></app-bookmark-icon>
 </ion-list>
