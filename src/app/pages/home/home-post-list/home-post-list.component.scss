@@ -1,5 +1,7 @@
 @import "/src/var";
-
+ion-item {
+  overflow: hidden;
+}
 .post-title {
   display: block;
   font-weight: 500;
@@ -9,8 +11,10 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   margin-bottom: 5px;
+  white-space: inherit;
 }
-time {
+time,
+.readTime {
   display: flex;
   align-items: center;
   color: rgba($primary-color, 0.6);

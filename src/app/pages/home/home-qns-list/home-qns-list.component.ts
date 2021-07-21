@@ -25,4 +25,11 @@ export class HomeQnsListComponent implements OnInit {
     let d = new Date(unix);
     return d.toLocaleDateString();
   }
+  readingTime(txt: string) {
+    const text = txt;
+    const wpm = 225;
+    const words = text.trim().split(/\s+/).length;
+    const time = Math.ceil(words / wpm);
+    return time;
+  }
 }

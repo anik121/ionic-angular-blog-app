@@ -1,5 +1,5 @@
 {
-  "name": "ionicApp",
+  "name": "Ionic App",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -9,8 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "ionic serve",
-    "build": "command-to-build (ex: webpack, tsc, babel, etc.)"
+    "dev": "ionic serve"
   },
   "private": true,
   "dependencies": {

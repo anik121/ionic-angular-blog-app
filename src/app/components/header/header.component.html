@@ -1,8 +1,16 @@
-<ion-header class="main-header">
+<ion-header class="main-header" translucent>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+    <ion-buttons *ngIf="hasBackBtn; else menuToggle" slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
+    <!-- End Back Btn -->
+
+    <ng-template #menuToggle>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ng-template>
+
     <div class="d-flex ion-justify-content-between">
       <ion-title>{{ title }}</ion-title>
       <div class="notification-wrapper">

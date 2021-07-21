@@ -25,11 +25,11 @@ export class HomePostListComponent implements OnInit {
     let d = new Date(unix);
     return d.toLocaleDateString();
   }
-  // readingTime() {
-  //   const text = document.getElementById("article").innerText;
-  //   const wpm = 225;
-  //   const words = text.trim().split(/\s+/).length;
-  //   const time = Math.ceil(words / wpm);
-  //   document.getElementById("time").innerText = time;
-  // }
+  readingTime(txt: string) {
+    const text = txt;
+    const wpm = 225;
+    const words = text.trim().split(/\s+/).length;
+    const time = Math.ceil(words / wpm);
+    return time;
+  }
 }

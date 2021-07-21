@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OthersService } from 'src/app/services/others.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Location } from '@angular/common';
 
 interface Post {
   id: number;
@@ -19,7 +20,8 @@ export class SinglePostPage implements OnInit {
   constructor(
     private router: ActivatedRoute,
     private _otherService: OthersService,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -31,6 +33,9 @@ export class SinglePostPage implements OnInit {
     });
   }
 
+  goBack() {
+    this.location.back();
+  }
   getPostContent(content: any) {
     return this.domSanitizer.bypassSecurityTrustHtml(content);
   }

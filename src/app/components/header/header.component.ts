@@ -9,6 +9,7 @@ import { NotificationListComponent } from '../notification-list/notification-lis
 })
 export class HeaderComponent implements OnInit {
   @Input() title: string = '';
+  @Input() hasBackBtn: boolean = false;
   constructor(private modalController: ModalController) {}
 
   ngOnInit() {}
