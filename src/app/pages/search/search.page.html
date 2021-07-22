@@ -1,9 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>search</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<app-header title="সন্ধান করুন"></app-header>
 <ion-content>
-
+  <ion-searchbar
+    placeholder="Filter Pizza"
+    inputmode="decimal"
+    type="decimal"
+    (ionChange)="onSearchChange($event)"
+    [debounce]="250"
+    animated
+  ></ion-searchbar>
+  <div class="search-wrapper">
+    <ion-img src="assets/img/svg/search.svg"></ion-img>
+  </div>
 </ion-content>
+<app-footer></app-footer>

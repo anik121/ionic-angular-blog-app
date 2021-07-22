@@ -1,0 +1,16 @@
+.search-wrapper {
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ion-img {
+  width: 75%;
+  height: auto;
+}
+ion-searchbar {
+  --box-shadow: 0 1px 5px rgba(31, 36, 75, 0.2);
+  --clear-button-color: var(--custom-primary);
+  --icon-color: var(--custom-primary);
+  --cancel-button-color: var(--custom-primary);
+}
