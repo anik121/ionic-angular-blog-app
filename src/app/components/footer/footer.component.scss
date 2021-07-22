@@ -5,8 +5,17 @@ ion-footer {
   }
 }
 ion-tab-button.selected {
-  --background: rgba(255, 255, 255, 0.3);
+  &::part(native) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 ion-tab-button {
-  color: white;
+  --color: white;
+  --ripple-color: white;
+  display: flex;
+  &::part(native) {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
 }
