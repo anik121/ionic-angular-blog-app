@@ -1,10 +1,11 @@
-@import "/src/var";
-
-.main-header::after {
-  background-image: none;
+.main-header {
+  &::after {
+    background-image: none;
+  }
 }
-ion-title {
-  color: $primary-color;
+ion-toolbar {
+  --color: #ffffff;
+  --background: var(--custom-primary);
 }
 .notification-wrapper {
   .badge {
@@ -19,7 +20,7 @@ ion-title {
   .notify-icon {
     position: relative;
     font-size: 26px;
-    color: $primary-color;
+    // color: $primary-color;
     margin-right: 10px;
   }
 }

@@ -1,5 +1,5 @@
 ion-footer {
-  --ion-background-color: #1f244b;
+  --ion-background-color: var(--custom-primary);
   &::before {
     background-image: none;
   }

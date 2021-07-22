@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 import { OthersService } from 'src/app/services/others.service';
 interface Post {
   id: number;
@@ -17,7 +18,8 @@ export class NotificationListComponent implements OnInit {
   posts: Post[] = [];
   constructor(
     private modalController: ModalController,
-    private _otherService: OthersService
+    private _otherService: OthersService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -47,13 +49,17 @@ export class NotificationListComponent implements OnInit {
   /**
    * @return (Delete Post ID)
    */
-  deletePost(id: number) {
-    console.log(id);
+  deletePost(id: number, index: number) {
+    this.posts.splice(index, 1);
   }
   /**
    * @return (Read Post ID)
    */
-  readPost(id: number) {
-    console.log(id);
+  readPost(id: number, index: number) {
+    this.router.navigate(['/post/' + id]);
+    this.dismiss();
+    setTimeout(() => {
+      this.posts.splice(index, 1);
+    }, 2000);
   }
 }

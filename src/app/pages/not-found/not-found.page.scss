@@ -1,0 +1,10 @@
+.notFoundPage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  ion-button {
+    --background: var(--custom-primary);
+    margin-top: 40px;
+  }
+}

@@ -31,3 +31,14 @@ ion-list-header {
     height: auto;
   }
 }
+.notFoundNotify {
+  width: 100%;
+  height: calc(100% - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ion-img {
+    width: 80%;
+    height: auto;
+  }
+}

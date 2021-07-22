@@ -6,29 +6,38 @@
     ></ion-button>
   </ion-list-header>
   <!-- End Modal Header Part -->
-  <div class="spinner ion-padding" *ngIf="!isLoading; else postList">
-    <!-- <ion-spinner name="lines"></ion-spinner> -->
-    <ion-img src="assets/img/svg/synchronize.svg"></ion-img>
-  </div>
 
-  <ng-template #postList>
-    <ion-label class="info-txt">বামে বা ডানে সুইপ করুন</ion-label>
-    <ion-item-sliding *ngFor="let post of posts">
-      <ion-item-options side="start">
-        <ion-item-option color="danger" (click)="deletePost(post.id)"
-          >Delete</ion-item-option
-        >
-      </ion-item-options>
-      <!-- End Left Sliding Option -->
-      <ion-item>
-        <ion-label>{{ post.title }}</ion-label>
-      </ion-item>
-      <!-- End Post Title -->
+  <ng-container *ngIf="posts.length > 0; else notificationEmpty">
+    <div class="spinner ion-padding" *ngIf="!isLoading; else postList">
+      <ion-spinner name="lines"></ion-spinner>
+    </div>
+    <!-- End Spinner -->
+    <ng-template #postList>
+      <ion-label class="info-txt">বামে বা ডানে সুইপ করুন</ion-label>
+      <ion-item-sliding *ngFor="let post of posts; index as i">
+        <ion-item-options side="start">
+          <ion-item-option color="danger" (click)="deletePost(post.id, i)"
+            >Delete</ion-item-option
+          >
+        </ion-item-options>
+        <!-- End Left Sliding Option -->
+        <ion-item>
+          <ion-label>{{ post.title }}</ion-label>
+        </ion-item>
+        <!-- End Post Title -->
 
-      <ion-item-options side="end">
-        <ion-item-option (click)="readPost(post.id)">Read</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-    <!-- End Right Sliding Option -->
+        <ion-item-options side="end">
+          <ion-item-option (click)="readPost(post.id, i)">Read</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+      <!-- End Right Sliding Option -->
+    </ng-template>
+    <!-- End Post List Item -->
+  </ng-container>
+  <!-- End Post List Item Wrapper -->
+  <ng-template #notificationEmpty>
+    <div class="notFoundNotify">
+      <ion-img src="assets/img/svg/not-found.svg"></ion-img>
+    </div>
   </ng-template>
 </ion-content>

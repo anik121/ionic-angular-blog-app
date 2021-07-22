@@ -1,5 +1,5 @@
 <ion-header class="main-header" translucent>
-  <ion-toolbar>
+  <ion-toolbar class="toolbar-color">
     <ion-buttons *ngIf="hasBackBtn; else menuToggle" slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -14,7 +14,11 @@
     <div class="d-flex ion-justify-content-between">
       <ion-title>{{ title }}</ion-title>
       <div class="notification-wrapper">
-        <ion-icon class="badge" name="ellipse"></ion-icon>
+        <ion-icon
+          *ngIf="posts.length > 0"
+          class="badge"
+          name="ellipse"
+        ></ion-icon>
         <ion-icon
           class="notify-icon"
           (click)="onClick()"
