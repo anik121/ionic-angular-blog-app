@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { OthersService } from 'src/app/services/others.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Location } from '@angular/common';
+import { PostService } from 'src/app/services/post.service';
 
 interface Post {
   id: number;
@@ -16,21 +17,27 @@ interface Post {
   styleUrls: ['./single-post.page.scss'],
 })
 export class SinglePostPage implements OnInit {
-  posts: Post[] = [];
+  posts: Array<any> = [];
+  isLoading: boolean = true;
   constructor(
     private router: ActivatedRoute,
     private _otherService: OthersService,
     private domSanitizer: DomSanitizer,
-    private location: Location
+    private location: Location,
+    private _postService: PostService
   ) {}
 
   ngOnInit(): void {
-    this._otherService.getPost().subscribe((post) => {
-      let singleItem = post.filter(
-        (singlePost) => singlePost.id === Number(this.router.snapshot.params.id)
-      );
-      this.posts = singleItem;
-    });
+    this._postService
+      .postSingleData(this.router.snapshot.params.id)
+      .subscribe((post) => {
+        this.posts = post;
+      });
+    if (this.posts) {
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 2000);
+    }
   }
 
   goBack() {

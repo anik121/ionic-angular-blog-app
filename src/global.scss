@@ -36,3 +36,7 @@
 html.md {
   --ion-default-font: "Hind Siliguri", sans-serif;
 }
+
+.ion-color-tertiary {
+  --ion-color-tertiary: var(--custom-primary-rgb);
+}

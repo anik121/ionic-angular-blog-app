@@ -6,3 +6,6 @@ This app is a hybrid app. make with ionic framework with capacitor.
 
 - **ios** : sudo ionic build && npx cap sync ios && npx cap open ios
 - \*_android_ : "sudo ionic build && npx cap sync android && npx cap open android
+
+
+[free svg icon](https://tablericons.com/)

@@ -20,7 +20,7 @@ export class BookmarkIconComponent implements OnInit {
     const toast = await this.toastController.create({
       message: 'আপনি এই পোস্টটি আপনার পছন্দের তালিকায় যোগ করেছেন।',
       duration: 2000,
-      color: 'success',
+      color: 'dark',
     });
     toast.present();
   }

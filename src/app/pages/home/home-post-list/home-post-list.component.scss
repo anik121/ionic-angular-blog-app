@@ -1,5 +1,6 @@
 @import "/src/var";
 ion-item {
+  position: relative;
   overflow: hidden;
 }
 .post-title {
@@ -7,6 +8,7 @@ ion-item {
   font-weight: 500;
   color: rgba($primary-color, 0.8);
   overflow: hidden;
+  text-transform: capitalize;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -23,4 +25,9 @@ time,
     margin-right: 10px;
   }
   font-size: 16px;
+}
+app-bookmark-icon {
+  position: absolute;
+  right: 5px;
+  z-index: 1;
 }

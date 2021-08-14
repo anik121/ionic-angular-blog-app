@@ -2,7 +2,7 @@
   <ion-item [routerLink]="'/post/' + post.id">
     <ion-avatar slot="start">
       <ion-img
-        src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=s"
+        src="https://plchldr.co/i/100x100?text=hello&bg=597308"
       ></ion-img>
     </ion-avatar>
     <div>
@@ -10,12 +10,14 @@
       <div class="d-flex">
         <time>
           <ion-icon name="calendar-outline"></ion-icon>
-          {{ getPostTime(post.create_at) }}
+          <!-- {{ getPostTime(post.create_at) }} -->
+          7/18/2021
         </time>
         <span class="readTime ms-3"
           ><ion-icon slot="start" name="timer-outline"></ion-icon>
-          {{ readingTime(post.content) }} মিনিট পড়া</span
-        >
+          <!-- {{ readingTime(post.content) }} মিনিট পড়া -->
+          2 মিনিট পড়া
+        </span>
       </div>
     </div>
   </ion-item>

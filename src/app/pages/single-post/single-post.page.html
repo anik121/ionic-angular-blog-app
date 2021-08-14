@@ -1,17 +1,31 @@
 <app-header [hasBackBtn]="true"></app-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header class="p-0 mb-3">
-      <ion-card-title>{{posts[0].title}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <article
-        class="single-post"
-        [innerHTML]="getPostContent(posts[0].content)"
-      ></article>
-    </ion-card-content>
+  <ion-card
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+    "
+    *ngIf="isLoading; else content"
+  >
+    <ion-spinner name="circles"></ion-spinner>
   </ion-card>
+  <ng-template #content>
+    <ion-card>
+      <ion-card-header class="p-0 mb-3">
+        <ion-card-title>{{posts.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <article
+        class="single-post"
+        [innerHTML]="getPostContent(posts[0].body)"
+      ></article> -->
+        <article>{{posts.body}}</article>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
 </ion-content>
 
 <app-footer></app-footer>
